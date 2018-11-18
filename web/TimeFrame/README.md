@@ -1,5 +1,7 @@
 Sprint 1
 
-Design webpage, added login page and added project
+Design webpage<br>
+added login page<br>
+added project<br>
 
 
