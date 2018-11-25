@@ -5,4 +5,5 @@ added login page<br>
 added project<br>
 
 Sprint 2<br>
-Google login<br>
+Use WampServer to local host the website so google login works <br>
+
