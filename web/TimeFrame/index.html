@@ -2,12 +2,14 @@
 <html lang="en">
 
   <head>
+    <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
 
 
     <meta name="google-signin-client_id" content="1070654539835-iapvq6jh1cr99404iuse4sfsbsmpec36.apps.googleusercontent.com">
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+ 
 
 
     <meta charset="utf-8">
@@ -84,13 +86,9 @@
           <div class="subheading mb-5">The project management for VFX/animation project
           </div>
 
-          <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-
-
-          <img src="img/login.png" alt="">
-          
-          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+<!-- 
+          <div class="g-signin2" data-width= "100" data-height="50" data-longtitle="true" data-onsuccess="onSignIn"></div>
 
 
 
@@ -102,7 +100,42 @@
                console.log('Image URL: ' + profile.getImageUrl());
                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
-          </script>
+          </script> -->
+          
+
+            
+             <div id="my-signin2"></div>
+            <script>
+            function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+            }
+            function onFailure(error) {
+            console.log(error);
+            }
+            function renderButton() {
+            gapi.signin2.render('my-signin2', {
+             'scope': 'profile email',
+             'width': 240,
+             'height': 50,
+             'longtitle': true,
+             'theme': 'dark',
+             'onsuccess': onSuccess,
+             'onfailure': onFailure
+              });
+              }
+            </script>
+
+            <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+
+
+
+            
+
+
+          <!-- Show the user profile details -->
+          <div class="userContent" style="display: none;"></div>
+          
 
     
        
