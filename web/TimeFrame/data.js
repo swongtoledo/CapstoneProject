@@ -14,26 +14,18 @@ $(document).ready(function(){
 		[
 			{
                 name: "Home",
-                link: "www.google.com"
+                link: "index.html"
             },
             {
-                name: "About",
-                link: "about.html"
+                name: "Spreedsheet",
+                link: "spreadSheet.html"
             },
             {
-                name: "News",
-                link: "news.html"
+                name: "Calendar",
+                link: "calendar.html"
             },
 
-/*             {
-                name: "Cats",
-                link: "cats.html"
-            },
 
-            {
-                name: "Contact",
-                link: "contact.html"
-            } */
 		]
     });
 
